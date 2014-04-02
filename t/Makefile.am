@@ -7,9 +7,9 @@ noinst_LTLIBRARIES = libtest-support.la
 libtest_support_la_SOURCES = tap.c tap.h
 libtest_support_la_LDFLAGS = -static
 
-LDADD = libtest-support.la ../libaraneae.la
-AM_CPPFLAGS = $(LIBEVENT_CFLAGS) $(LIBCARES_CFLAGS) $(LIBSSL_CFLAGS)
-AM_LDFLAGS = $(LIBEVENT_LIBS) $(LIBCARES_LIBS) $(LIBSSL_LIBS)
+LDADD = libtest-support.la ../libsoundchip.la
+AM_CPPFLAGS = $(FFTW_CFLAGS) $(SNDFILE_CFLAGS) $(LIBPNG_CFLAGS)
+AM_LDFLAGS = $(FFTW_LIBS) $(SNDFILE_LIBS) $(LIBPNG_LIBS)
 
 wrap_LDADD =
 wrap_LDFLAGS =
