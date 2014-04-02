@@ -10,6 +10,8 @@ use List::Util qw( sum min max );
 use constant MAXHEIGHT => 512;
 use constant BOOST     => 30;
 
+my $out = shift || die;
+
 my @dat = ();
 while (<>) {
   chomp;
@@ -68,7 +70,7 @@ for my $x ( 0 .. $width - 1 ) {
 }
 
 {
-  open my $fh, '>', 'out.png';
+  open my $fh, '>', $out;
   print $fh $img->png;
 }
 

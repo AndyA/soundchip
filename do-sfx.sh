@@ -13,7 +13,7 @@ find "$source" -not -path '*/.*'  -type f -name "*.WAV" -mmin +1 | while read wa
   pf="$png/$name.png"
   [ -e "$pf" ] && continue
   echo "$wav -> $pf"
-  ./soundchip "$wav" > "$df" && perl tools/dat2png.pl "$df" && mv "out.png" "$pf"
+  ./soundchip "$wav" > "$df" && perl tools/dat2png.pl "$pf" "$df"
 done
 
 
